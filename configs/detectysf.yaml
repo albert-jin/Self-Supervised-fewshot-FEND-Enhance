@@ -1,0 +1,36 @@
+data_dir: data
+dataset_name: politifact
+n_shots: 16
+
+model_name_or_path: bert-base-uncased
+label_words: [real, fake]
+prompt_template: "It is {mask} that {text}."
+max_length: 512
+
+batch_size: 16
+n_epochs: 3
+iters: 20
+learning_rate: 0.00005
+weight_decay: 0.0
+warmup_ratio: 0.0
+
+device: cuda
+seed: 0
+num_workers: 0
+
+user_threshold: 5
+use_graph_alignment: true
+pseudo_label_percentile: 95.0
+
+contrastive_mode: unsupervised
+contrastive_temperature: 0.05
+contrastive_weight: 0.2
+
+adversarial_weight: 0.2
+adversarial_delta: 0.5
+feature_matching_weight: 1.0
+noise_dim: 100
+mlp_hidden: 512
+
+log_dir: logs
+
