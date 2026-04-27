@@ -1,3 +1,5 @@
 # Reference materials (excluded from version control)
 paper/
 FIRST_PRINCIPLES.md
+.idea/
+data/
